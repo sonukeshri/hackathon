@@ -29,12 +29,12 @@ pipeline {
                    }
             }
         }
-        stage ('Run Repairnator') {
-                            steps {
-                                   echo 'Running Repairnator'
-                                   sh './repairnator.sh'
+        post {
+                always {
+                    echo 'I will always run repairnator!'
+                    sh './repairnator.sh'
+                }
+            }
 
-                            }
-                        }
     }
 }
