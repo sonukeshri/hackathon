@@ -29,5 +29,12 @@ pipeline {
                    }
             }
         }
+        stage ('Run Repairnator') {
+                            steps {
+                                   echo 'Running Repairnator'
+                                   sh './repairnator.sh'
+
+                            }
+                        }
     }
 }
