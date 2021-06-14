@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-java -cp repairnator-pipeline-3.3-SNAPSHOT-jar-with-dependencies.jar fr.inria.spirals.repairnator.pipeline.Launcher -l GIT_REPOSITORY --ghOauth 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 --repairTools NPEFix,Sorald --gitrepo --gitrepourl https://github.com/sonukeshri/hackathon --gitrepobranch master -w /var/lib/jenkins/userContent/RW --createPR  --sonarRules 2111,2116
+java -cp repairnator-pipeline-3.3-SNAPSHOT-jar-with-dependencies.jar fr.inria.spirals.repairnator.pipeline.Launcher -l GIT_REPOSITORY --ghOauth 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 --repairTools NPEFix,Sorald --gitrepo --gitrepourl https://github.com/sonukeshri/hackathon --gitrepobranch main -w /var/lib/jenkins/userContent/RW --createPR --sonarRules 2111,2116
