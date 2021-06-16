@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 public class User {
 
 
-    public static int x = 5;
+    public static final int x = 5;
     public String value;
 
     /*1656: Variables should not be self-assigned*/
