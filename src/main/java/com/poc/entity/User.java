@@ -5,8 +5,8 @@ public class User {
     String greet(String name) {
 
         int [] x = new int[6];
-        String argStr = x.toString(); // Noncompliant
-        int argHash = x.hashCode(); // Noncompliant
+        String argStr = java.util.Arrays.toString(x); // Noncompliant
+        int argHash = java.util.Arrays.hashCode(x); // Noncompliant
         String capitalizedName = name.toUpperCase();
         return "Hello Mr./Ms "+capitalizedName;
     }
