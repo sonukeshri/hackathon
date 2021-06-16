@@ -24,8 +24,8 @@ public class User {
         //21111 Big Decimal
         double d = 1.1;
 
-        BigDecimal bd1 = new BigDecimal(d); // Noncompliant; see comment above
-        BigDecimal bd2 = new BigDecimal(1.1); // Noncompliant; same result
+        BigDecimal bd1 = BigDecimal.valueOf(d); // Noncompliant; see comment above
+        BigDecimal bd2 = BigDecimal.valueOf(1.1); // Noncompliant; same result
 
         //1854 Unused assignments should be removed
 
