@@ -20,7 +20,7 @@ public class User {
         String firstName = "hackathon"; // String overrides equals
         String lastName = getLastName();
 
-        if (firstName == lastName) {
+        if (firstName.equals(lastName)) {
             return true;
         }// Non-compliant;
         return false;
