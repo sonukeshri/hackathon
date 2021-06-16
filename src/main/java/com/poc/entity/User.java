@@ -10,7 +10,7 @@ public class User {
 
 
     public void setName(String value) {
-        value = value;
+        this.value = value;
     }
 
     String greet(String name) {
