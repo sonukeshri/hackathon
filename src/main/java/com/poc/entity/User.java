@@ -4,8 +4,7 @@ import java.math.BigDecimal;
 
 public class User {
 
-    // 1444 "public static" fields should be constant
-    public static int x = 5;
+    // 1444 "public static" fields should be constantpublic static final int x = 5;
     public String value;
 
     //1656: Variables should not be self-assigned
