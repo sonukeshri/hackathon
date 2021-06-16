@@ -31,8 +31,6 @@ public class MathsUtil {
     public void unusedVariable() {
         int b;
         int i;
-
-        i = 9 + 7; // Noncompliant; calculation result not used before value is overwritten
         i = compute();
         b = i +8;
 
