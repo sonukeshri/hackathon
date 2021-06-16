@@ -22,8 +22,8 @@ public class MathsUtil {
     /*2116: "hashCode" and "toString" should not be called on array instances*/
     public void arithmeticOps() {
         int [] x = new int[6];
-        String argStr = x.toString(); // Noncompliant
-        int argHash = x.hashCode(); // Noncompliant
+        String argStr = java.util.Arrays.toString(x); // Noncompliant
+        int argHash = java.util.Arrays.hashCode(x); // Noncompliant
 
         System.out.println("Args Str "+argStr+" and ArgHash "+argHash);
     }
