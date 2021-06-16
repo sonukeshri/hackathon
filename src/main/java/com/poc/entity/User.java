@@ -11,7 +11,8 @@ public class User {
     }
 
     String greet(String name) {
-        return "hello";
+        String s = name.toLowerCase();
+        return s;
     }
 
     /*4973: Strings and Boxed types should be compared using "equals()"*/
@@ -47,6 +48,7 @@ public class User {
             System.out.println("In synchronized block");
         }
     }
+
 
 
 
