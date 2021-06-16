@@ -17,8 +17,8 @@ public class User {
 
         //21116 Arrays
         int [] x = new int[6];
-        String argStr = x.toString(); // Noncompliant
-        int argHash = x.hashCode(); // Noncompliant
+        String argStr = java.util.Arrays.toString(x); // Noncompliant
+        int argHash = java.util.Arrays.hashCode(x); // Noncompliant
 
 
         //21111 Big Decimal
