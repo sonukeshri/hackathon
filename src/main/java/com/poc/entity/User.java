@@ -11,8 +11,7 @@ public class User {
     }
 
     String greet(String name) {
-        String s = name.toLowerCase();
-        return s;
+        return "hello";
     }
 
     /*4973: Strings and Boxed types should be compared using "equals()"*/

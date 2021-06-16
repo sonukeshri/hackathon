@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 
 public class MathsUtil {
 
-    /*1444: "public static" fields should be constant*/
     public static int x = 5;
 
     public int sum(int a , int b) {
