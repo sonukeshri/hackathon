@@ -1,11 +1,8 @@
 package com.poc.entity;
 
-import java.math.BigDecimal;
 
 public class User {
 
-
-    public static int x = 5;
     public String value;
 
     /*1656: Variables should not be self-assigned*/
@@ -14,46 +11,44 @@ public class User {
     }
 
     String greet(String name) {
-
-
-        int [] x = new int[6];
-        String argStr = x.toString(); // Noncompliant
-        int argHash = x.hashCode(); // Noncompliant
-
-        System.out.println("Args Str "+argStr+" and ArgHash "+argHash);
-
-        double d = 1.1;
-
-        BigDecimal bd1 = new BigDecimal(d); // Noncompliant; see comment above
-        BigDecimal bd2 = new BigDecimal(1.1); // Noncompliant; same result
-
-        System.out.println("Big Decimal values are "+bd1+" and "+bd2);
-
-        int b;
-        int i;
-
-        i = 9 + 7; // Noncompliant; calculation result not used before value is overwritten
-        i = compute();
-
-        b = i +8;
-
-        System.out.println("Value of b is "+b);
-
-
-        float twoThirds = 2/3; // Noncompliant; int division. Yields 0.0
-        long millisInYear = 1_000*3_600*24*365; // Noncompliant; int multiplication. Yields 1471228928
-
-        System.out.println("Two-Thirds is "+twoThirds);
-        System.out.println("MillisInYear "+millisInYear);
-
-
-        String capitalizedName = name.toUpperCase();
-        return "Hello Mr./Ms "+capitalizedName;
+        return "hello";
     }
 
-    int compute() {
-        return 7;
+    /*4973: Strings and Boxed types should be compared using "equals()"*/
+    boolean compareObjects() {
+        String firstName = "hackathon"; // String overrides equals
+        String lastName = getLastName();
+
+        if (firstName == lastName) {
+            return true;
+        }// Non-compliant;
+        return false;
     }
+
+    public String getLastName() {
+        return "hackathon";
+    }
+
+    /*2142: "InterruptedException" should not be ignored*/
+    public void run () {
+        int a = 5;
+        try {
+            if (a == 5) {
+                throw new InterruptedException("example");
+            }
+        }catch (InterruptedException e) { // Noncompliant; logging is not enough
+            System.out.println("Exception occurred");
+        }
+    }
+
+    /*3067: "getClass" should not be used for synchronization*/
+    public void doSomethingSynchronized(){
+        synchronized (this.getClass()) {  // Noncompliant
+            System.out.println("In synchronized block");
+        }
+    }
+
+
 
 
 }

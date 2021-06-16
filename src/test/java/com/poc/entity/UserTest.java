@@ -10,6 +10,6 @@ public class UserTest {
     @Test
     public void greetTest() {
         User user = new User();
-        Assertions.assertEquals("Hello Mr./Ms MIKE",user.greet(null));
+        Assertions.assertEquals("hello",user.greet(null));
     }
 }
