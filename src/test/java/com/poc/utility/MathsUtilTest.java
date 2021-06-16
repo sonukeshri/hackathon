@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 public class MathsUtilTest {
 
-    public static MathsUtil util;
+    public static final MathsUtil util;
 
     @BeforeAll
     public static void init() {
